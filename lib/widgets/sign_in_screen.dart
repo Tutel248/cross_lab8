@@ -20,7 +20,6 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFC7FAED),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -39,42 +38,21 @@ class SignInScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 36,
                         fontWeight: FontWeight.w300,
-                        color: Colors.black,
+                        color: Colors.grey,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 40),
 
-                const Text(
-                  'Email:',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                ),
+                const Text('Email:', style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    border: const OutlineInputBorder(),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  ),
-                ),
+                const TextField(),
                 const SizedBox(height: 16),
 
-                const Text(
-                  'Password:',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                ),
+                const Text('Password:', style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    border: const OutlineInputBorder(),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  ),
-                ),
+                const TextField(obscureText: true),
                 const SizedBox(height: 24),
 
                 OutlinedButton(
@@ -94,12 +72,8 @@ class SignInScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF0D9488),
-                          foregroundColor: Color(0xFF115E59),
-                        ),
                         onPressed: () => _showImplementDialog(context),
-                        child: const Text('Login', style: TextStyle(color: Colors.white)),
+                        child: const Text('Login'),
                       ),
                     ),
                     const SizedBox(width: 16),

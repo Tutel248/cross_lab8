@@ -18,7 +18,6 @@ class ResetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFC7FAED),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -37,7 +36,7 @@ class ResetPasswordScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 36,
                         fontWeight: FontWeight.w300,
-                        color: Colors.black,
+                        color: Colors.grey,
                       ),
                     ),
                   ],
@@ -50,25 +49,14 @@ class ResetPasswordScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
 
-                const Text('Email:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                const Text('Email:', style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    border: const OutlineInputBorder(),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                  ),
-                ),
+                const TextField(),
                 const SizedBox(height: 24),
 
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0D9488),
-                    foregroundColor: Color(0xFF115E59),
-                  ),
                   onPressed: () => _showImplementDialog(context),
-                  child: const Text('Reset', style: TextStyle(color: Colors.white)),
+                  child: const Text('Reset'),
                 ),
                 const SizedBox(height: 12),
 
